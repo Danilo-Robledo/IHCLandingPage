@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page - Curso IHC y TM</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contactanos.css" />
+    <link rel="stylesheet" href="registro.css" />
+    <link rel="stylesheet" href="catalogo.css" />
+    <link rel="stylesheet" href="carrito.css" />
+    <link rel="stylesheet" href= "https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"/>
+    <link rel="stylesheet" href="footer.css" /> 
+  </head>
+  <body>
+    <!-- MENÚ SUPERIOR -->
+    <nav class="top-header">
+      <a href="index.html" class="logo">
+        <img src="Imagenes/Logo_Mundo_Peluche.png" alt=""
+      /></a>
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="menu-toggle" aria-label="Abrir menú">
+        &#9776;
+        <!-- Ícono de hamburguesa -->
+      </button>
+
+      <!-- MENÚ DE NAVEGACIÓN -->
+      <ul class="menu-horizontal">
+        <li>
+          <a href="index.html" target="_self">Quienes Somos</a>
+          <ul class="menu-vertical">
+            <li><a href="index.html-#historia" target="_self">Historia</a></li>
+            <li><a href="index.html-#proposito" target="_self">Propósito</a></li>
+            <li><a href="index.html-#mision-vision" target="_self">Visión y Misión</a></li>
+            <li><a href="#">Comentarios</a></li>
+          </ul>
+        </li>
+        <li><a href="catalogo.html" target="_self">Tienda</a></li>
+        <li><a href="contactanos.html" target="_self">Contáctanos</a></li>
+        <li><a href="carrito.html" target="_self">Carrito</a></li>
+      </ul>
+    </nav>
+                  <!-- SECCIÓN CONTÁCTANOS -->
+              <section class="contacto" id="contacto">
+                <h2>Contáctanos</h2>
+                <div class="contacto-contenido">
+                  <!-- FORMULARIO -->
+                  <form class="formulario-contacto" id="formularioContacto" name= "frm">
+                    <div class="form-grupo">
+                      <label for="nombres">Nombres:</label>
+                      <input type="text" id="nombres" name="nombres" /> <!--required-->
+                    </div>
+      
+                    <div class="form-grupo">
+                      <label for="apellidos">Apellidos:</label>
+                      <input type="text" id="apellidos" name="apellidos" /> <!--required-->
+                    </div>
+      
+                    <div class="form-grupo">
+                      <label for="tipoDoc">Tipo de Documento:</label>
+                      <select id="tipoDoc" name="tipoDoc">
+                        <option value="dni">DNI</option>
+                        <option value="pasaporte">Pasaporte</option>
+                        <option value="carnet">Carnet de Extranjería</option>
+                      </select>
+                    </div>
+                                
+                    <div class="form-grupo">
+                      <label for="numDoc">Número de Documento:</label>
+                      <input type="nDo" id="numDoc" name="numDoc" /> <!--required-->
+                    </div>
+
+                    <div class="form-grupo">
+                      <label for="telefono">Teléfono:</label>
+                      <input type="tel" id="telefono" name="telefono" />
+                    </div>
+      
+                  <!--  <div class="form-grupo">
+                      <label for="departamento">Departamento:</label>
+                      <select id="departamento" name=departamento">
+                        <option value="arequipa">Arequipa</option>
+                        <option value="ayacucho">Ayacucho</option>
+                        <option value="ica">Ica</option>
+                        <option value="lima">Lima</option>
+                        <option value="piura">Piura</option>
+                      </select>
+                    </div>-->
+
+                    <div class="form-grupo">
+                      <label for="email">Correo electrónico:</label>
+                      <input type="text" id="email" name="email" /> <!--required-->
+                    </div>
+      
+                    <div class="form-grupo">
+                      <label for="asunto">Asunto:</label>
+                      <textarea id="asunto" name="asunto" rows="3"></textarea>
+                    </div>
+      
+                    <div class="form-grupo">
+                      <label>Preferencias de contacto:</label>
+                      <div class="checkboxes">
+                        <label
+                          ><input type="checkbox" name="preferencia" value="correo" />
+                          Correo</label
+                        >
+                        <label
+                          ><input
+                            type="checkbox"
+                            name="preferencia"
+                            value="telefono"
+                          />
+                          Teléfono</label
+                        >
+                      </div>
+                    </div>
+      
+                    <div class="form-grupo">
+                      <label>¿Tienes membresía?</label>
+                      <div class="radios">
+                        <label
+                          ><input type="radio" name="membresia" value="si" />
+                          Sí</label
+                        >
+                        <label
+                          ><input type="radio" name="membresia" value="no" />
+                          No</label
+                        >
+                      </div>
+                    </div>
+      
+                    <button type="submit">Enviar</button>
+                  </form>
+      
+                  <!-- TEXTO A LA DERECHA -->
+                  <div class="contacto-instrucciones">
+                    <p>
+                      Completa el formulario con tus datos. Nuestro equipo se pondrá
+                      en contacto contigo según la información proporcionada.
+                    </p>
+                    <p>
+                      Recuerda usar un correo válido y seleccionar tu tipo de
+                      documento correctamente. Si tienes membresía, indícalo para
+                      acceder a beneficios exclusivos.
+                    </p>
+                    <div
+                      id="mensajeEnviado"
+                      class="mensaje-enviado"
+                      style="display: none"
+                    >
+                      Mensaje enviado correctamente.
+                    </div>      
+    </section>
+    <script src="main.js"></script>
+  </body>
+  <footer>
+  <!-- PIE DE PAGINA -->
+<section id="footer">
+  <footer class="footer">
+  <div class="footer-container">
+  <!-- Logo y nombre de sitio -->
+  <div class="footer-brand">
+  <img
+  src="Imagenes/Logo_Mundo_Peluche.png"
+  alt="Logo"
+  class="footer-logo"
+  />
+  <p>Mundo Peluche</p>
+  <small>© 2025 Todos los derechos reservados</small>
+  </div>
+  <!-- Enlaces legales -->
+  <div class="footer-links">
+  <h4>Legal</h4>
+  <a href="Documentos/Política de Privacidad.pdf">Política de Privacidad</a>
+  <!-- Dentro de href llama a un documento pdf con la poltica-->
+  <a href="Documentos/Términos y Condiciones.pdf">Términos y Condiciones</a>
+  <!-- Dentro de href llama a un documento pdf con los terminos y condiciones-->
+  <a href="Documentos/Protección de Datos.pdf">Protección de Datos</a>
+  </div>
+  <!-- Redes sociales con íconos personalizados -->
+  <div class="footer-social">
+  <h4>Síguenos</h4>
+  <a href="#"
+  ><img
+  src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+  alt="Facebook"
+  class="social-icon"
+  /></a>
+  <a href="#"
+  ><img
+  src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
+  alt="Instagram"
+  class="social-icon"
+  /></a>
+  <a href="#"
+  ><img
+  src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+  alt="LinkedIn"
+  class="social-icon"
+  /></a>
+  <a href="#"
+  ><img
+  src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
+  alt="Twitter"
+  class="social-icon"
+  /></a>
+  </div>
+  </div>
+  </footer>
+  </section>
+</footer>
+</html>
